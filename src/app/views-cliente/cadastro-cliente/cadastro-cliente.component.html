@@ -1,0 +1,53 @@
+<header>
+    <nav> 
+        <div class="logo">
+            <img class="img-logo" src="../../../assets/img/logo.png" alt="logo superior esquerdo">
+        </div>
+
+        <div class="opcoes"> 
+            <a class="a-menu" routerlink="/servicos"> <img class="img-icones-nav" src="../../assets/img/icone_servicos.png"> SERVIÇOS </a>
+            <a class="a-menu" routerLink="/home"> <img class="img-icones-nav" src="../../assets/img/icone_home.png"> HOME </a> 
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="caixa-cliente">
+        <h2>Cadastro-se</h2>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <div class="caixa-texto">
+                <input type="text" placeholder="Digite seu CPF" [(ngModel)]="cliente.cpf" name="cpf" required #cpf="ngModel">
+                <div class="alert alert-danger" role="alert" *ngIf="!cpf.valid && cpf.touched">
+                    OPS! O CPF é obrigatório!
+            </div>
+        </div>
+        <div class="caixa-texto">
+            <input type="text" placeholder="Digite seu nome" [(ngModel)]="cliente.nome" name="nome" required #nome="ngModel">
+                <div class="alert alert-danger" role="alert" *ngIf="!nome.valid && nome.touched">
+                    OPS! O nome é obrigatório!
+            </div>
+        </div>
+        <div class="caixa-texto">
+            <input type="text" placeholder="Digite seu email" [(ngModel)]="cliente.email" name="email" required #email="ngModel">
+                <div class="alert alert-danger" role="alert" *ngIf="!email.valid && email.touched">
+                    OPS! O email é obrigatório!
+            </div>
+        </div>
+        <div class="caixa-texto">
+            <input type="text" placeholder="Digite seu telefone" [(ngModel)]="cliente.telefone" name="telefone" required #telefone="ngModel">
+                <div class="alert alert-danger" role="alert" *ngIf="!telefone.valid && telefone.touched">
+                    OPS! O telefone é obrigatório!
+            </div>
+        </div>
+        <div class="caixa-texto botao">
+            <button (click)="Salvar()" type="Submit"  class="botao-salvar">Cadastrar</button>
+        </div>
+        <div class="texto"> 
+            <h3>Já fez um cadastro antes? <a routerLink="/agendamento">Agende agora!</a></h3>
+        </div>  
+    </form>
+</div>
+<footer> 
+    <p> Direitos reservados - Lava Rappid - Desenvolvido por Renan Fabricio - 2023</p>
+</footer>
+</body>

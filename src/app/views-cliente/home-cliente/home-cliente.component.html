@@ -1,0 +1,121 @@
+<body>
+    <nav id="topo"> 
+        <div class="logo">
+            <img class="img-logo" src="../../../assets/img/logo.png" alt="logo superior esquerdo">
+        </div>
+
+        <div class="opcoes"> 
+            <a class="a-menu" routerlink="/servicos"> <img class="img-icones-nav" src="../../../assets/img/icone_servicos.png"> SERVIÇOS </a>
+            <a (click)="irParaSobre()" class="a-menu" > <img class="img-icones-nav" src="../../../assets/img/icone_sobre.png"> SOBRE </a>
+            <a (click)="irParaParceiros()" class="a-menu" > <img class="img-icones-nav" src="../../../assets/img/icone_parceiros.png"> PARCEIROS </a>
+            <a (click)="irParaContatos()" class="a-menu" > <img class="img-icones-nav" src="../../../assets/img/icone_contatos.png"> CONTATOS </a>
+        </div>
+    </nav>
+
+    <a (click)="VoltarAoTopo()"> <img class="seta-retorno" src="../../../assets/img/seta_retorno.png" alt="Seta que retorna para inicio da pagina"></a>
+    <header>
+        <img src="../../../assets/img/banner.png" alt="banner contendo o logo do lavarappid acompanhado um fundo">
+        <div class="botaoAgendar">
+            <button routerLink="/cadastro/cliente" type="submit"></button>
+        </div>
+    </header>
+
+    <article>
+        <h1>Lava Rappid</h1>
+        <p>Na <strong><span id="txt-preto">Lava Rappid</span></strong>, ao deixar o seu carro em nossos cuidados, assumimos a tarefa de transformar a lavagem do seu carro em uma experiência gratificante!</p>
+        <p>A transparência e o incansável compromisso com a qualidade são valores que perseguimos diariamente e que colaboram com a tradição de sucesso da nossa empresa.</p>
+        <p>Para nós, um carro traduz a personalidade do seu dono, por isso, cada veículo deve ser tratado como único</p>
+    </article>
+
+    <section id="pag-servicos">
+        <h2>Serviços populares</h2>
+        <p>Conheça os nossos serviços mais populares</p>
+
+        <div id="container">
+            <div class="card">
+                <img src="../../../assets/img/lavagem_ecologica.jpeg" alt="Lavagem de forma ecologica">
+                <div class="card-content">
+                    <h3>Lavagem Ecológica</h3>
+                    <p>Esse é o carro-chefe da Lava Rappid. Nosso serviço é ecologicamente sustentável e, portanto, utilizamos o mínimo de água para a limpeza de carro. </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../../assets/img/higienizacao.jpg" alt="Higienização interna do veículo">
+                <div class="card-content">
+                    <h3>Higienização</h3>
+                    <p>A higienização automotiva interna feita pela Lava Rappid é uma limpeza completa do interior do veículo. </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../../assets/img/cristalizacao.jpg" alt="Cristalização de pintura">
+                <div class="card-content">
+                    <h3>Cristalização</h3>
+                    <p>A cristalização oferece uma proteção duradoura para uma série de males que o tempo exerce sobre a pintura. </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../../assets/img/Lavagem_motor.jpg" alt="Lavagem de motor">
+                <div class="card-content">
+                    <h3>Limpeza de motor</h3>
+                    <p>Esse procedimento é feito manualmente pela Lava Rappid, com escovas e produtos biodegradáveis. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    /* espaco para video*/
+    <section id="pag-parceiros">
+        <h2>Nossos parceiros</h2>
+
+        <div id="container-parceiros">
+            <div class="coluna-parceiros">
+                <p>O segredo do sucesso está em fazer parcerias duradouras!</p>
+
+                <div class="container-imagens">
+                    <img class="img-parceiros" src="../../../assets/img/parceiro1.png" alt="Parceiro - Porto Seguro">
+                    <img class="img-parceiros" src="../../../assets/img/parceiro2.png" alt="Parceiro - Uber">
+                    <img class="img-parceiros" src="../../../assets/img/parceiro3.png" alt="Parceiro - 99">
+                    <img class="img-parceiros" src="../../../assets/img/parceiro4.png" alt="Parceiro - Cabify">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pag-contatos">
+        <h2>Contato</h2>
+        
+        <div id="container-contato">
+            <div class="coluna-contato">
+                <p>Se conecte com a gente pelas redes sociais e fique por dentro de todas as novidades!</p>
+
+                <div class="container-imagens-contatos">
+                    <a href="http://instagram.com/" target="_blank">
+                        <img class="img-icones" src="../../../assets/img/logoinsta.png" />
+                    </a>
+                    <p>@lavarappid</p>
+                    <a href="https://twitter.com/" target="_blank">
+                        <img class="img-icones" src="../../../assets/img/logotwitter.png" />
+                    </a>
+                    <p>lava_rappid</p>
+                    <a href="mailto:lavarappid@gmail.com" target="_blank">
+                        <img class="img-icones" src="../../../assets/img/logoemail.png" />
+                    </a>
+                    <p>lavarappid@gmail.com</p>
+                    <a href="https://linkedin.com/" target="_blank">
+                        <img class="img-icones" src="../../../assets/img/logolinkedin.png" />
+                    </a>
+                    <p>Lava Rappid</p>
+                    <a>
+                        <img class="img-icones" src="../../../assets/img/logowhatsaap.png" />
+                    </a>
+                    <p>(11)9 9999-9999</p>
+                    <div class="endereco">
+                        <img class="img-icones-end" src="../../../assets/img/logoendereco.png" />
+                        <p>Rua dos lava rapidos, Nº 1000 - CEP: 1234-567 - São Paulo/SP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer> 
+        <p> Direitos reservados - Lava Rappid - Desenvolvido por Renan Fabricio - 2023</p>
+    </footer>

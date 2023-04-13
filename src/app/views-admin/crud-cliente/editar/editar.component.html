@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html long="pt-br">
+
+<head>
+    <title>Lava Rappid - Cadastra-se</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Renan Fabricio" />
+</head>
+    <header>
+        <nav>
+            <div class ="logo">
+                <img class="img-logo" src="../../../assets/img/logo.png" alt="logo superior esquerdo">
+            </div>
+            <div class="texto-navbar">
+                <h2>ÁREA DO ADMINISTRADOR</h2>
+            </div>
+        </nav>
+    </header>
+    
+    <body>
+        <div class="caixa-cliente">
+            <h2>Editar cliente</h2>
+            <form action="">
+                <div class="caixa-texto">
+                    <label for="">CPF</label>
+                    <input type="text" placeholder="Digite um CPF" [(ngModel)]="cliente.cpf" name="cpf">
+                </div>
+                <div class="caixa-texto">
+                    <label for="">Nome</label>
+                    <input type="text" placeholder="Digite o nome" [(ngModel)]="cliente.nome" name="nome">
+                </div>
+                <div class="caixa-texto">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Digite o email" [(ngModel)]="cliente.email" name="email">
+                </div>
+                <div class="caixa-texto">
+                    <label for="">Telefone</label>
+                    <input type="text" placeholder="Digite um telefone" [(ngModel)]="cliente.telefone" name="telefone">
+                </div>
+                <div class="caixa-texto botao">
+                    <button type="button" (click)="Atualizar(cliente)" class="botao-salvar">Atualizar</button>
+                    <button type="reset" routerLink="/listar/clientes" class="botao-cancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    <footer> 
+        <p> Direitos reservados - Lava Rappid - Desenvolvido por Renan Fabricio - 2023</p>
+    </footer>
+</body>
+</html>

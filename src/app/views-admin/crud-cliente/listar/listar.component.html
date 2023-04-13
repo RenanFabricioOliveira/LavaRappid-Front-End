@@ -1,0 +1,58 @@
+<header>
+    <nav id="topo">
+        <div class="logo">
+            <img class="img-logo" src="../../../assets/img/logo.png" alt="logo superior esquerdo">
+        </div>
+
+        <div class="opcoes">
+            <a claas="a-menu" routerLink="/listar/agendamentos"><img class="img-icones-nav" src="../../../../assets/img/iconcalendario.png"> AGENDAMENTOS </a>
+            <a claas="a-menu" routerLink="/listar/veiculos"><img class="img-icones-nav" src="../../../../assets/img/iconcar.png"> VEICULOS </a>
+            <a claas="a-menu" routerLink="/listar/servicos"><img class="img-icones-nav" src="../../../assets/img/icone_servicos.png"> SERVIÇOS </a>
+            <a claas="a-menu" routerLink="/listar/lavarapido"><img class="img-icones-nav-dados" src="../../../../assets/img/icondados.png"> MEUS DADOS </a>
+            <a claas="a-menu" routerLink="/home/admin"><img class="img-icones-nav" src="../../../../assets/img/icone_home.png"> HOME </a>
+        </div>
+    </nav>
+    <a (click)="voltarAoTopo()"><img class="seta-retorno" src="../../../../assets/img/seta_retorno.png" alt="Seta que retorna para inicio da pagina"></a>
+</header>
+<div class="card">
+    <div class="card-header">
+        <h3>Clientes cadastrados</h3>
+    </div>
+</div>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <div class="botoes-admin">
+                <button (click)="Novo()" type="button" class="btn btn-primary">Novo cliente</button>
+            </div>
+        </div>
+        <div class="card body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>CPF</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th class="acoes">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cliente of clientes" class="text-center">
+                        <td>{{cliente.cpf}}</td>
+                        <td>{{cliente.nome}}</td>
+                        <td>{{cliente.email}}</td>
+                        <td>{{cliente.telefone}}</td>
+                        <td>
+                            <button (click)="Editar(cliente)" class="btn btn-warning">Editar</button>
+                            <button (click)="Delete(cliente)" class="btn btn-danger" style="margin-left: 10px;">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<footer>
+    <p> Direitos reservados - Lava Rappid - Desenvolvido por Renan Fabricio - 2023</p>
+</footer>
