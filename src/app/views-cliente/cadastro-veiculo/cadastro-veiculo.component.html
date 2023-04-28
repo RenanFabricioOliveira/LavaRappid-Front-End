@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Lava Rappid - Cadastro de veiculo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Renan Fabricio" />
+</head>
+
+<header>
+    <nav>
+        <div class="logo">
+            <img class="img-logo" src="../../../assets/img/logo.png" alt="logo superior esquerdo">
+        </div>
+
+        <div class="opcoes">
+            <a class="a-menu" routerLink="/servicos"> <img class="img-icones-nav" src="../../../assets/img/icone_servicos.png"> SERVIÇOS </a>
+            <a class="a-menu" routerLink="/home"> <img class="img-icones-nav" src="../../../assets/img/icone_home.png"> HOME</a>
+        </div>
+
+    </nav>
+</header>
+
+<body>
+    <div class="caixa-cliente">
+        <h1>Vamos cadastrar seu veiculo?</h1>
+        <h2>Ou melhor, a sua maquina!</h2>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <div class="caixa-texto">
+                <input type="text" placeholder="Digite a placa" [(ngModel)]="veiculo.placa" required name="placa" required #placa="ngModel">
+                <div class="alert alert-danger" role="alert" *ngIf="!placa.valid && placa.touched">
+                    O campo da placa é obrigatorio
+                </div>
+            </div>
+            <div class="caixa-texto">
+                <input type="text" placeholder="Digite seu CPF" [(ngModel)]="veiculo.cliente_cpf" name="cpf" required #cpf="ngModel">
+                <div class="alert alert-danger" role="alert" *ngIf="!cpf.valid && cpf.touched">
+                    O campo do CPF é obrigatorio
+                </div>
+            </div>
+            <div class="caixa-texto">
+                <input type="text" placeholder="Digite o modelo" [(ngModel)]="veiculo.modelo" name="modelo" required #modelo="ngModel">
+                <div class="alert alert-danger" role="alert" *ngIf="!modelo.valid && modelo.touched">
+                    O campo do modelo é obrigatorio
+                </div>
+            </div>
+            <div class="caixa-texto">
+                <input type="text" placeholder="Digite a cor" [(ngModel)]="veiculo.cor" name="cor" required #cor="ngModel">
+                <div class="alert alert-danger" role="alert" *ngIf="!cor.valid && cor.touched">
+                    O campo da cor é obrigatorio
+                </div>
+            </div>
+            <div class="caixa-texto">
+                <input type="text" placeholder="Digite o porte (Pequeno, Médio ou Grande)" [(ngModel)]="veiculo.porte" name="porte" required #porte="ngModel">
+                <div class="alert alert-danger" role="alert" *ngIf="!porte.valid && porte.touched">
+                    O campo do porte é obrigatorio
+                </div>
+            </div>
+            <div class="caixa-texto botao">
+                <button type="button" (click)="Salvar()" class="botao-salvar">Salvar</button>
+                <button type="reset" routerLink="/home" class="botao-cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <footer> 
+        <p> Direitos reservados - Lava Rappid - Desenvolvido por Renan Fabricio - 2023</p>
+    </footer>
+</body>
+</html>

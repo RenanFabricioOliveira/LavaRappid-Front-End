@@ -30,6 +30,5 @@ export class ClienteService {
 
     deleteCliente(cliente: Cliente){
         return this.http.delete<Cliente>(this.url + "/" + cliente.cpf);
-    }
-
+    }  
 }

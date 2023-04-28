@@ -113,6 +113,7 @@ form h3 {
 label {
     font-size: small;
     padding: 3px;
+    display: flex;
 }
 
 /* Estilo nav bar*/

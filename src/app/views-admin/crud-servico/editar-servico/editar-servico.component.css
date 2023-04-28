@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../../../assets/img/img_editar_servico.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    margin-top: -101px;
+}
+
+header {
+    display: block;
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+.caixa-cliente {
+    position: absolute;
+    max-width: 600px;
+    width: 100%;
+    height: 540px;
+    background-color: transparent;
+    padding: 40px;
+    margin-right: 50%;
+    margin-top: -1%;
+}
+
+.caixa-cliente h2 {
+    position: relative;
+    font-size: 36px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-top: -20px;
+}
+
+.caixa-cliente h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: #4070f4;
+}
+
+.caixa-cliente form {
+    margin-top: 30px;
+}
+
+.caixa-cliente form .caixa-texto {
+    height: 45px;
+    margin: 30px 0;
+}
+
+form.caixa-texto input {
+    height: 100%;
+    width: 90%;
+    outline: blue;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #c7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.caixa-texto input:focus,
+.caixa-texto input:valid {
+    border-color: #4070f4;
+}
+
+form h3 {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 120px;
+}
+
+.caixa-texto.botao button {
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    background: #0169be;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    transform: translateX(20px);
+    margin-top: 20px;
+}
+
+.caixa-texto.botao button:hover {
+    background: #043761;
+}
+
+.caixa-texto.botao .botao-salvar {
+    margin: 10px;
+}
+
+label {
+    padding: 5px;
+}
+
+/* Estilo nav bar*/
+
+nav {
+    background-color: #020202;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    box-shadow: #000000 0px 20px 30px -10px;
+}
+
+.texto-navbar h2 {
+    color: white;
+    font-size: 25px;
+}
+
+.img-Logo {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-icones-nav {
+    width: 20px;
+    height: auto;
+    object-fit: cover;
+}
+    a {
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+    }
+
+    .a-menu {
+        margin-right: 70px;
+    }
+
+    .a-menu:link,
+    .a-menu:visited {
+    color: #0169be;
+    }
+
+    .a-menu:hover,
+    .a-menu:active {
+        color: white;
+    }
+
+footer {
+    background-color: #000;
+    padding: 8px;
+    margin-top: 618px;
+    position: relative;
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}

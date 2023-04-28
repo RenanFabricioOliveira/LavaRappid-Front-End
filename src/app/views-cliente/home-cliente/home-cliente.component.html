@@ -5,19 +5,17 @@
         </div>
 
         <div class="opcoes"> 
-            <a class="a-menu" routerlink="/servicos"> <img class="img-icones-nav" src="../../../assets/img/icone_servicos.png"> SERVIÇOS </a>
+            <a class="a-menu" routerLink="/servicos"> <img class="img-icones-nav" src="../../../assets/img/icone_servicos.png"> SERVIÇOS </a>
             <a (click)="irParaSobre()" class="a-menu" > <img class="img-icones-nav" src="../../../assets/img/icone_sobre.png"> SOBRE </a>
             <a (click)="irParaParceiros()" class="a-menu" > <img class="img-icones-nav" src="../../../assets/img/icone_parceiros.png"> PARCEIROS </a>
             <a (click)="irParaContatos()" class="a-menu" > <img class="img-icones-nav" src="../../../assets/img/icone_contatos.png"> CONTATOS </a>
+            <a class="a-menu" routerLink="/home-admin"> <img class="img-icones-nav" src="../../../assets/img/cadeadoadmin.png"> ADMINISTRADOR </a>
         </div>
     </nav>
 
-    <a (click)="VoltarAoTopo()"> <img class="seta-retorno" src="../../../assets/img/seta_retorno.png" alt="Seta que retorna para inicio da pagina"></a>
+    <a (click)="VoltarAoTopo()"><img class="seta-retorno" src="../../../assets/img/seta_retorno2.png" alt="Seta que retorna para inicio da pagina"></a>
     <header>
         <img src="../../../assets/img/banner.png" alt="banner contendo o logo do lavarappid acompanhado um fundo">
-        <div class="botaoAgendar">
-            <button routerLink="/cadastro/cliente" type="submit"></button>
-        </div>
     </header>
 
     <article>
@@ -30,7 +28,6 @@
     <section id="pag-servicos">
         <h2>Serviços populares</h2>
         <p>Conheça os nossos serviços mais populares</p>
-
         <div id="container">
             <div class="card">
                 <img src="../../../assets/img/lavagem_ecologica.jpeg" alt="Lavagem de forma ecologica">
@@ -61,15 +58,26 @@
                 </div>
             </div>
         </div>
+        <div class="botaoAgendar">
+            <button routerLink="/cadastro/cliente" type="submit"></button>
+        </div>
     </section>
-    /* espaco para video*/
+    
+    <section id="pag-sobre">
+        <h2>Sobre</h2>
+        <div id="container-sobre">
+            <div class="coluna-sobre">
+                <p>Quem possui carro sabe que o valor de um automóvel vai além do quesito financeiro. O carro é, também, um companheiro de todas as horas e precisa ser funcional, seja para a correria do dia a dia ou para um passeio junto da família. </p>
+                <p>É com essa visão que a Lava Rappid cuida do seu carro. Nós apostamos na relação entre o dono e o seu veículo e cuidamos com desse bem tão essencial.</p>
+                <p>Assumindo um compromisso com cada cliente, oferecemos serviços que vão desde a limpeza comum até reparos nas estruturas internas e externas dos veículos que chegam até nós</p>
+            </div>
+        </div>
+    </section>
+
     <section id="pag-parceiros">
         <h2>Nossos parceiros</h2>
-
-        <div id="container-parceiros">
-            <div class="coluna-parceiros">
-                <p>O segredo do sucesso está em fazer parcerias duradouras!</p>
-
+        <div class="coluna-parceiros">
+            <div id="container-parceiros">  
                 <div class="container-imagens">
                     <img class="img-parceiros" src="../../../assets/img/parceiro1.png" alt="Parceiro - Porto Seguro">
                     <img class="img-parceiros" src="../../../assets/img/parceiro2.png" alt="Parceiro - Uber">
@@ -77,6 +85,7 @@
                     <img class="img-parceiros" src="../../../assets/img/parceiro4.png" alt="Parceiro - Cabify">
                 </div>
             </div>
+            <p>O segredo do sucesso está em fazer parcerias duradouras!</p>
         </div>
     </section>
 
@@ -107,15 +116,18 @@
                     <a>
                         <img class="img-icones" src="../../../assets/img/logowhatsaap.png" />
                     </a>
-                    <p>(11)9 9999-9999</p>
+                    <p>(11) 9 0325-1998</p>
                     <div class="endereco">
                         <img class="img-icones-end" src="../../../assets/img/logoendereco.png" />
-                        <p>Rua dos lava rapidos, Nº 1000 - CEP: 1234-567 - São Paulo/SP</p>
+                        <p>Av. Giovanni Gronchi, 5930 - Vila Andrade, São Paulo - SP, 05724-002</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.2434932605797!2d-46.74221241551581!3d-23.631449423964654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce51455c412b75%3A0x615b242b99a74c56!2sMorumbi%20Town%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1682639014935!5m2!1spt-BR!2sbr" ></iframe>
+    </div>
     <footer> 
         <p> Direitos reservados - Lava Rappid - Desenvolvido por Renan Fabricio - 2023</p>
     </footer>

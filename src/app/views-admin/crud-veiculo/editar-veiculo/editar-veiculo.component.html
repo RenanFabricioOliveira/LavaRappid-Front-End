@@ -1,0 +1,38 @@
+
+<header>
+    <nav>
+        <div class ="logo">
+            <img class="img-logo" src="../../../assets/img/logo.png" alt="logo superior esquerdo">
+        </div>
+        <div class="texto-navbar">
+            <h2>ÁREA DO ADMINISTRADOR</h2>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="caixa-cliente">
+        <h2>Editar cliente</h2>
+        <form action="">
+            <div class="caixa-texto">
+                <label for="">Modelo</label>
+                <input type="text" placeholder="Digite o modelo do veículo" [(ngModel)]="veiculo.modelo" name="modelo">
+            </div>
+            <div class="caixa-texto">
+                <label for="">Cor</label>
+                <input type="text" placeholder="Digite a cor do veículo" [(ngModel)]="veiculo.cor" name="cor">
+            </div>
+            <div class="caixa-texto">
+                <label for="">Porte</label>
+                <input type="text" placeholder="Digite o porte" [(ngModel)]="veiculo.porte" name="porte">
+            </div>
+            <div class="caixa-texto botao">
+                <button type="button" (click)="Atualizar(veiculo)" class="botao-salvar">Atualizar</button>
+                <button type="reset" routerLink="/listar/veiculos" class="botao-cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <footer> 
+        <p> Direitos reservados - Lava Rappid - Desenvolvido por Renan Fabricio - 2023</p>
+    </footer>
+</body>

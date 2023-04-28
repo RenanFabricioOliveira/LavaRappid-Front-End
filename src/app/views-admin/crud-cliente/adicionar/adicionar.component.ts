@@ -23,7 +23,7 @@ export class AdicionarComponent implements OnInit{
     this.service.createCliente(this.cliente)
     .subscribe(data => {
       alert("Cliente cadastrado com sucesso!");
-      this.router.navigate(['/listar/clientes'])
+      this.router.navigate(['/listar/clientes']);
     })
   }
 }

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,100;0,300;0,700;1,300&display=swap');
+@import url('http://fonts.cdnfonts.com/css/aharoni');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.seta-retorno {
+    width: 75px;
+    height: auto;
+    position: absolute;
+    position: fixed;
+    left: 95%;
+    top: 88%;
+}
+header,
+img {
+    width: 100%;
+    height: 611px;
+}
+
+header img {
+    position: inherit;
+    object-fit: cover;
+}
+
+
+/* Navbar */
+nav {
+    background-color: #020202;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: #000000 0px 20px 30px -10px;
+}
+
+.img-logo {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-icones-nav {
+    width: 20px;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-icones-nav-cli {
+    width: 15px;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-icones-nav-dados {
+    width: 15px;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-icones-nav-carro {
+    width: 26px;
+    height: auto;
+    object-fit: cover;
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+.a-menu {
+    margin-right: 70px;
+}
+
+.a-menu:link,
+.a-menu:visited {
+    color: #0169be;
+}
+
+.a-menu:hover,
+.a-menu:active {
+    color: white;
+}
+
+
+/* */
+
+section {
+    padding: 20px;
+}
+h2 {
+    font: 3rem 'Kaushan Script', cursive;
+    color: #0169be;
+    margin-bottom: 20px;
+}
+
+
+/* pag-contatos */
+
+#pag-contatos {
+    color: rgb(2, 2, 2);
+    margin-top: -10px;
+    height: 300px;
+}
+
+.coluna-contato p {
+    color: rgb(2, 2, 2);
+    margin-top: -10px;
+}
+.container-imagens-contatos {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-icones {
+    width: 50px;
+    height: auto;
+    padding: 10px;
+    margin: 8px;
+    object-fit: cover;
+    margin-top: -25px;
+}
+.container-imagens-contatos p {
+    color: rgb(3, 3, 3);
+    margin-top: -30px;
+    margin-right: 30px;
+    margin-left: -5px;
+}
+
+.endereco {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 100px;
+}
+
+.img-icones-end {
+    width: 50px;
+    height: auto;
+    padding: 10px;
+    margin: 8px;
+    object-fit: cover;
+    margin-top: -48px;
+    margin-left: -50px;
+    position: absolute;
+}
+.img-parceiros {
+    width: 280px;
+    height: auto;
+    padding: 70px;
+    object-fit: contain;
+}
+
+
+/* Rodapé */
+
+footer {
+    background-color: #000;
+    padding: 8px;
+    position: static;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    text-align: center;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+}

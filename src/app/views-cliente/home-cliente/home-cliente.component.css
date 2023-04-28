@@ -22,7 +22,7 @@ body{
 header,
 img {
     width: 100%;
-    height: 620px;
+    height: auto;
 }
 
 header img {
@@ -32,8 +32,8 @@ header img {
 
 button {
     width: 480px;
-    height: 110px;
-    margin-top: -12px;
+    height: 100px;
+    margin-top: -22px;
     transform: translateX(90%);
     background-color: transparent;
     background-image: url("../../../assets/img/botao.png");
@@ -45,12 +45,23 @@ button {
     text-align: center;
     font-size: 50px;
     color: #0169be;
+    position: absolute;
+    left: 3%; 
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    width: auto;
+    height: 300px;
 }
 
 /* Estilo nav bar*/
 
 nav {
-    background-color: #020202;
+    background-color: #242424;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -59,7 +70,7 @@ nav {
     box-shadow: #000000 0px 20px 30px -10px;
 }
 
-.img-Logo {
+.img-logo {
     width: auto;
     height: auto;
     object-fit: cover;
@@ -113,7 +124,7 @@ h1 {
 p {
     font: 1.2rem 'Roboto', sans-serif;
     color: #777;
-    text-align: justify;
+    text-align: center;
     line-height: 30px
 }
 
@@ -128,7 +139,8 @@ section {
 h2 { 
     font: 3rem 'Kaushan Script', cursive; 
     color: #0169be; 
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    text-align: center; 
 } 
 
 /* pagina parceiros */ 
@@ -139,11 +151,13 @@ h2 {
 
 #pag-parceiros h2 {
     color: #0169be; 
+    text-align: center;
 } 
 
 #pag-parceiros p { 
     color: rgb(2, 2, 2); 
-    margin-top: -10px; 
+    margin-top: -100px; 
+    text-align: center;
 }
 
 ul {  
@@ -160,7 +174,8 @@ li {
 /* pagina serviços */
 
 #pag-servicos { 
-    background-color: rgb(255, 251, 251); 
+    background-color: rgb(255, 251, 251);
+    padding-bottom: 45px;
 } 
 
 #container { 
@@ -218,10 +233,11 @@ li {
 .coluna-sobre {
     padding: 40px;
     margin-top: -35px;
+    height: 200px;
 }
 
 .container-imagens{
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,6 +265,7 @@ video {
 .coluna-contato p {
     color: rgb(2, 2, 2);
     margin-top: -10px;
+    text-align: center;
 }
 
 .container-imagens-contatos {
@@ -276,12 +293,13 @@ video {
 
 .endereco {
     position: absolute;
-    margin-top: 200px;
+    bottom: -280%;
+    margin-top: 150px;
     margin-left: 100px;
 }
 
 .img-icones-end {
-    width: 50px;
+    width: 35px;
     height: auto;
     padding: 10px;
     margin: 8px;
@@ -292,10 +310,12 @@ video {
 }
 
 .img-parceiros {
-    width: 280px;
+    width: 100px;
     height: auto;
-    padding: 70px;
+    padding: 80px;
     object-fit: contain;
+    margin-top: -5%;
+    padding-bottom: 10%;
 }
 
 /*Rodapé */

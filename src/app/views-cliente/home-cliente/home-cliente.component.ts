@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-cliente',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeClienteComponent implements OnInit{
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     
@@ -19,20 +20,23 @@ export class HomeClienteComponent implements OnInit{
       topo.scrollIntoView(); 
     }
   }
+
   irParaSobre(){ 
-    const topo = document.getElementById("topo");
+    const topo = document.getElementById("pag-sobre");
     if (topo) {
       topo.scrollIntoView(); 
     }
   }
+
   irParaParceiros(){ 
-    const topo = document.getElementById("topo");
+    const topo = document.getElementById("pag-parceiros");
     if (topo) {
       topo.scrollIntoView(); 
     }
   }
+
   irParaContatos(){ 
-    const topo = document.getElementById("topo");
+    const topo = document.getElementById("pag-contatos");
     if (topo) {
       topo.scrollIntoView(); 
     }

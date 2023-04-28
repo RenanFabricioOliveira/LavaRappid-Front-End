@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html long="pt-br">
+
+<head>
+    <title>Lava Rappid - Cadastra-se</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Renan Fabricio" />
+</head>
+    <header>
+        <nav>
+            <div class ="logo">
+                <img class="img-logo" src="../../../assets/img/logo.png" alt="logo superior esquerdo">
+            </div>
+            <div class="texto-navbar">
+                <h2>ÁREA DO ADMINISTRADOR</h2>
+            </div>
+        </nav>
+    </header>
+    
+    <body>
+        <div class="caixa-cliente">
+        <h2>Editar serviço</h2>
+            <form action="">
+                <div class="caixa-texto">
+                    <label for="">Descrição</label>
+                    <input type="text" placeholder="Digite a descrição" [(ngModel)]="servico.descricao" name="descricao">
+                </div>
+                <div class="caixa-texto">
+                    <label for="">Valor</label>
+                    <input type="text" placeholder="Digite o valor" [(ngModel)]="servico.valor" name="valor">
+                </div>
+                <div class="caixa-texto botao">
+                    <button type="button" (click)="Atualizar(servico)" class="botao-salvar">Atualizar</button>
+                    <button type="reset" routerLink="/listar/servicos" class="botao-cancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    <footer> 
+        <p> Direitos reservados - Lava Rappid - Desenvolvido por Renan Fabricio - 2023</p>
+    </footer>
+</body>
+</html>
