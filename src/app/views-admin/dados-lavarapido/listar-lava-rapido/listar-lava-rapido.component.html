@@ -1,1 +1,62 @@
-<p>listar-lava-rapido works!</p>
+<header>
+    <nav>
+        <div class="logo">
+            <img class="img-logo" src="../../../assets/img/logo.png" alt="logo superior esquerdo">
+        </div>
+
+        <div class="opcoes">
+            <a class="a-menu" routerLink="/listar/agendamentos"> <img class="img-icones-nav"
+                    src="../../../assets/img/iconcalendario.png"> AGENDAMENTOS </a>
+            <a class="a-menu" routerLink="/listar/clientes"> <img class="img-icones-nav"
+                    src="../../../assets/img/iconcliente.png"> CLIENTES </a>
+            <a class="a-menu" routerLink="/listar/veiculos"> <img class="img-icones-nav-carro"
+                    src="../../../assets/img/iconcar.png"> VEICULOS </a>
+            <a class="a-menu" routerLink="/listar/servicos"> <img class="img-icones-nav"
+                    src="../../../assets/img/icone_servicos.png"> SERVIÇOS </a>
+            <a class="a-menu" routerLink="/home/admin"> <img class="img-icones-nav"
+                    src="../../../../assets/img/icone_home.png"> HOME </a>
+        </div>
+
+    </nav>
+</header>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Meus dados</h3>
+        </div>
+        <div class="card body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th>EMAIL</th>
+                        <th>SENHA</th>
+                        <th>TELEFONE</th>
+                        <th>ENDEREÇO</th>
+                        <th>CEP</th>
+                        <th>AÇÕES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let lavarapido of lavaRapidos" class="text-center">
+                        <td>{{lavarapido.idLavarapido}}</td>
+                        <td>{{lavarapido.nome}}</td>
+                        <td>{{lavarapido.email}}</td>
+                        <td>{{lavarapido.senha}}</td>
+                        <td>{{lavarapido.telefone}}</td>
+                        <td>{{lavarapido.endereco}}</td>
+                        <td>{{lavarapido.cep}}</td>
+                        <td>
+                            <button (click)="Editar(lavarapido)" class="btn btn-warning">Editar</button>
+                            <button (click)="Delete(lavarapido)" class="btn btn-danger" style="margin-left: 10px;">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<footer>
+    <p> Direitos reservados - Lava Rappid - Desenvolvido por Renan Fabricio - 2023</p>
+</footer>

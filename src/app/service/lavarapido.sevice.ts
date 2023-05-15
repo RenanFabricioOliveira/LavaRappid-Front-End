@@ -1,6 +1,5 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Cliente } from "../model/cliente";
 import { LavaRapido } from "../model/lavarapido";
 
 
@@ -28,4 +27,8 @@ export class LavarapidoService {
     updateLavaRapido(lavarapido: LavaRapido){
         return this.http.put<LavaRapido>(this.url + "/" + lavarapido.idLavarapido, lavarapido);
     }  
+
+    deleteServico(lavarapido: LavaRapido){
+        return this.http.delete<LavaRapido>(this.url + "/" + lavarapido.idLavarapido);
+    }
 }

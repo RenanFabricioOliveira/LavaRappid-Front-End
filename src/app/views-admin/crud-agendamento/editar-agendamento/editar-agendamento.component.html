@@ -1,1 +1,53 @@
-<p>editar-agendamento works!</p>
+<header>
+    <nav>
+        <div class="logo">
+            <img class="img-logo" src="../../../assets/img/logo.png" alt="logo superior esquerdo">
+        </div>
+        <div class="texto-navbar">
+            <h2>ÁREA DO ADMINISTRADOR</h2>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="caixa-cliente">
+        <h2>Editar agendamento</h2>
+        <form action="">
+            <div class="caixa-texto">
+                <label for="">Placa do veiculo</label>
+                <input type="text" [(ngModel)]="agendamento.veiculo_Placa.placa" name="editar-placaVeiculo">
+            </div>
+            <div class="caixa-texto">
+                <label for="">CPF do cliente</label>
+                <input type="text" [(ngModel)]="agendamento.veiculo_Placa.cliente_cpf.cpf" name="editar-cpfCliente">
+            </div>
+            <div class="caixa-texto">
+                <label for="">Data do agendamento</label>
+                <input type="date" [(ngModel)]="agendamento.dataAgendamento" name="editar-data">
+            </div>
+            <div class="caixa-texto">
+                <label for="">Horário do agendamento</label>
+                <input type="time" [(ngModel)]="agendamento.horarioAgendamento" name="editar-horario">
+            </div>
+            <div class="caixa-texto">
+                <label for="">Id do serviço</label>
+                <input type="text" [(ngModel)]="agendamento.servico_idServico.idServico" name="editar-idServico">
+            </div>
+            <div class="caixa-texto">
+                <label for="">Status do agendamento</label>
+                <input type="text" [(ngModel)]="agendamento.status" name="editar-status">
+            </div>
+            <div class="caixa-texto">
+                <label for="">Observações</label>
+                <input type="text" [(ngModel)]="agendamento.observacoes" name="editar-observacoes">
+            </div>
+            <div class="caixa-texto botao">
+                <button type="button" (click)="Atualizar(agendamento)" class="botao-salvar">Atualizar</button>
+                <button type="reset" routerLink="/listar/agendamentos" class="botao-cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>Direitos reservados - Lava Rappid - Desenvolvido por Renan Fabricio - 2023</p>
+    </footer>
+</body>

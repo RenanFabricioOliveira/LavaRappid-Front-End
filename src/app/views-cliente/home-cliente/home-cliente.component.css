@@ -46,7 +46,7 @@ button {
     font-size: 50px;
     color: #0169be;
     position: absolute;
-    left: 3%; 
+    left: 26%; 
 }
 
 .map {
@@ -125,7 +125,7 @@ p {
     font: 1.2rem 'Roboto', sans-serif;
     color: #777;
     text-align: center;
-    line-height: 30px
+    line-height: 30px;
 }
 
 #txt-preto {
@@ -222,7 +222,6 @@ li {
 /* pagina sobre */
 
 #pag-sobre p {
-    text-align: center; 
     margin-bottom: 10px;
 }
 
@@ -233,7 +232,8 @@ li {
 .coluna-sobre {
     padding: 40px;
     margin-top: -35px;
-    height: 200px;
+    height: 100px;
+
 }
 
 .container-imagens{
@@ -293,7 +293,7 @@ video {
 
 .endereco {
     position: absolute;
-    bottom: -280%;
+    bottom: -185%;
     margin-top: 150px;
     margin-left: 100px;
 }
@@ -314,8 +314,8 @@ video {
     height: auto;
     padding: 80px;
     object-fit: contain;
-    margin-top: -5%;
-    padding-bottom: 10%;
+    margin-top: 0%;
+    padding-bottom: 5%;
 }
 
 /*Rodapé */
