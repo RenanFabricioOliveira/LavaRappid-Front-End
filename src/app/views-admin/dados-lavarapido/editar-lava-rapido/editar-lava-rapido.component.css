@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -59,7 +60,7 @@ header {
     height: 43px;
     margin: 25px 0;
 }
-form .caixa-texto input {
+form.caixa-texto input {
     height: 100%;
     width: 90%;
     outline: blue;

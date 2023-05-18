@@ -9,7 +9,8 @@ import { LavarapidoService } from 'src/app/service/lavarapido.sevice';
   styleUrls: ['./editar-lava-rapido.component.css']
 })
 export class EditarLavaRapidoComponent implements OnInit {
-lavarapido: LavaRapido = new LavaRapido();
+  
+  lavarapido: LavaRapido = new LavaRapido();
   constructor(private service: LavarapidoService, private router: Router) { }
 
   ngOnInit(): void {
@@ -23,10 +24,10 @@ lavarapido: LavaRapido = new LavaRapido();
       this.lavarapido = data;
     })
   }
-Atualizar(lavarapido:LavaRapido){
+Atualizar(lavarapido: LavaRapido){
     this.service.updateLavaRapido(lavarapido)
-    .subscribe(data=>{
-      this.lavarapido=data;
+    .subscribe(data=> {
+      this.lavarapido = data;
       alert("Dados atualizados com sucesso!");
       this.router.navigate(["listar/lavarapido"])
     })

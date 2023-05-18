@@ -28,7 +28,7 @@ export class LavarapidoService {
         return this.http.put<LavaRapido>(this.url + "/" + lavarapido.idLavarapido, lavarapido);
     }  
 
-    deleteServico(lavarapido: LavaRapido){
+    deleteLavaRapido(lavarapido: LavaRapido){
         return this.http.delete<LavaRapido>(this.url + "/" + lavarapido.idLavarapido);
     }
 }

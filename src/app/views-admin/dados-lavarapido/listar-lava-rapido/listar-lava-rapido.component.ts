@@ -9,14 +9,14 @@ import { LavarapidoService } from 'src/app/service/lavarapido.sevice';
   styleUrls: ['./listar-lava-rapido.component.css']
 })
 export class ListarLavaRapidoComponent implements OnInit {
-lavaRapidos: LavaRapido[] = [];
+  lavaRapidos: LavaRapido[] = [];
   constructor(private service: LavarapidoService, private router: Router) { }
 
   ngOnInit(): void {
     this.service.getLavaRapido()
-    .subscribe(data => {
-      this.lavaRapidos = data;
-    })
+      .subscribe(data => {
+        this.lavaRapidos = data;
+      })
   }
 
   Editar(lavarapido: LavaRapido): void {
@@ -24,15 +24,15 @@ lavaRapidos: LavaRapido[] = [];
     this.router.navigate(["editar/lavarapido"]);
   }
 
-  Home(){
+  Home() {
     this.router.navigate(["home/admin"]);
   }
 
-  Delete(lavarapido: LavaRapido){
-    this.service.deleteServico(lavarapido)
-    .subscribe(data=> {
-      this.lavaRapidos=this.lavaRapidos.filter(s => s !== lavarapido);
-      alert("Servico excluido com sucesso!");
-    })
-}
+  Delete(lavarapido: LavaRapido) {
+    this.service.deleteLavaRapido(lavarapido)
+      .subscribe(data => {
+        this.lavaRapidos = this.lavaRapidos.filter(s => s !== lavarapido);
+        alert("Lava rápido excluído com sucesso!");
+      })
+  }
 }
