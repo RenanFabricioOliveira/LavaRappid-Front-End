@@ -23,7 +23,7 @@ export class CadastroClienteComponent implements OnInit{
     this.service.createCliente(this.cliente)
     .subscribe(data => {
       alert("Certinho! cadastrado realizado com sucesso!");
-      this.router.navigate(['/listar/clientes'])
+      this.router.navigate(['/cadastro/veiculo'])
     })
   }
 }

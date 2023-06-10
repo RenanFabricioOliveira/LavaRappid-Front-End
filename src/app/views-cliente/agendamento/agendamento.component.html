@@ -1,1 +1,69 @@
-<p>agendamento works!</p>
+<header>
+    <nav>
+        <div class="logo">
+            <img class="img-logo" src="../../../assets/img/logo.png" alt="logo superior esquerdo">
+        </div>
+
+        <div class="opcoes">
+            <a class="a-menu" routerLink="/servicos"> <img class="img-icones-nav"
+                    src="../../assets/img/icone_servicos.png"> SERVIÇOS </a>
+            <a class="a-menu" routerLink="/home"> <img class="img-icones-nav" src="../../assets/img/icone_home.png"> HOME</a>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="caixa-cliente">
+        <h1>Tá feito,</h1>
+        <h2>Bora agendar a sua lavagem!</h2>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <div class="caixa-texto">
+                <input type="text" placeholder="Digite a placa do veiculo" [(ngModel)]="agendamento.veiculo_Placa"
+                    name="adicionar-placaVeiculo" required #placa="ngModel">
+                <div class="alert alert-danger" role="alert" *ngIf="!placa.valid && placa.touched">
+                    OPS! O placa do veiculo é obrigatória
+                </div>
+            </div>
+            <label for="">Escolha uma data:</label>
+            <div class="caixa-texto">
+                <input type="date" placeholder="Digite a data do agendamento" [(ngModel)]="agendamento.dataAgendamento"
+                    name="adicionar-data" required #data="ngModel">
+                <div class="alert alert-danger" role="alert" *ngIf="!data.valid && data.touched">
+                    OPS! A dato do agendamento é obrigatória
+                </div>
+            </div>
+            <label for="">Escolha um horário:</label>
+            <div class="caixa-texto">
+                <input type="time" placeholder="Digite o Horário do agendamento"
+                    [(ngModel)]="agendamento.horarioAgendamento" name="adicionar-horario" required #horario="ngModel">
+                <div class="alert alert-danger" role="alert" *ngIf="!horario.valid && horario.touched">
+                    OPS! O horário do agendamento é obrigatório
+                </div>
+            </div>
+            <label for="">Escolha um serviço:</label>
+            <select id="servico" [(ngModel)]="agendamento.servico_idServico" name="servico" #servico="ngModel">
+                <option value="">Escolha um serviço</option>
+                <option value="1">Lavagem simples - R$30,00</option>
+                <option value="2">Lavagem ecológica - R$90,00 </option>
+                <option value="3">Higienização - 100,00 </option>
+                <option value="4">Cristalização - R$200,00 </option>
+                <option value="4">Polimento Tech - R$280,00 </option>
+                <option value="6">Combo Clean tech - R$390,00 </option>
+            </select>
+            <div class="alert alert-danger" role="alert" *ngIf="!servico.valid && servico.touched">
+                OPS! O serviço escolhido é obrigatório
+            </div>
+            <div class="caixa-texto">
+                <input type="text" placeholder="Observações" [(ngModel)]="agendamento.observacoes"
+                    name="adicionar-observacoes">
+            </div>
+            <div class="caixa-texto botao">
+                <button type="button" (click)="Salvar()" class="botao-salvar">Agendar</button>
+                <button type="reset" routerLink="/home" class="botao-cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>Direitos reservados - Lava Rappid - Desenvolvido por Renan Fabricio - 2023</p>
+    </footer>
+</body>

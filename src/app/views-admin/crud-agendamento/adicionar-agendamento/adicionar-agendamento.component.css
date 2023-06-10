@@ -130,7 +130,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px;
+    padding: 10px;
     box-shadow: #000000 0px 20px 30px -10px;
 }
 
@@ -172,7 +172,7 @@ nav {
 footer {
     background-color: #000;
     padding: 8px;
-    margin-top: 618px;
+    margin-top: 1000px;
     position: relative;
     width: 100%;
 }
